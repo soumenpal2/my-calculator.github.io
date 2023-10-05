@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- google fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+   <!-- bootstrap core css -->
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+<!-- fonts style -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<!-- font awesome style -->
+<link href="css/font-awesome.min.css" rel="stylesheet" />
+<!-- data aos -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+
+<style>
+   body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .calculator-container {
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .calculator-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        .calculator-container button {
+            width: 48px;
+            height: 48px;
+            font-size: 18px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .calculator-container button:hover {
+            background-color: #45a049;
+        }
+        .clear{
+            background-color: rgb(216, 103, 103)!important;
+        } 
+        
+        .make{
+            background-color: rgb(16, 49, 3)!important;
+        }
+</style>
+
+
+<body>
+
+  <!doctype html>
+  <html lang="en">
+  
+  <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+      <!-- CSS -->
+      <link rel="stylesheet" href="style.css">
+  
+      <title>testing</title>
+  </head>
+  
+  <body>
+    <div class="calculator-container">
+        <h2>Soumen Calculator</h2>
+        <input type="text" id="display" readonly>
+        <br>
+        <button onclick="clearDisplay()" class="clear">C</button>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('+')">+</button>
+        <br>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('-')">-</button>
+        <br>
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('*')">*</button>
+        <br>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="appendToDisplay('.')">.</button>
+      
+        <button onclick="appendToDisplay('/')">/</button>
+        <button onclick="calculateResult()" class="make">=</button>
+        <br>
+        
+    </div>
+
+<script>
+
+function clearDisplay() {
+           document.getElementById('display').value = '';
+       }
+
+function appendToDisplay(value){
+    document.getElementById('display').value+=value;
+}
+
+function calculateResult() {
+ try{
+
+const result=eval(document.getElementById('display').value);
+alert (result);
+ } catch(error){
+    document.getElementById('display').value = 'Error';
+ }
+
+
+}
+
+</script>
+
+
+
+
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+
+  
+</body>
+</html>
+
+
